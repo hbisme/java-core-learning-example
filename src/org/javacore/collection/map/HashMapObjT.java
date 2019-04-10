@@ -46,23 +46,27 @@ public class HashMapObjT{
 }
 
 class A{
-	public boolean equals(Object obj){
+	@Override
+    public boolean equals(Object obj){
 		return true;
 	}
 }
 
 class B{
-	public int hashCode(){
+	@Override
+    public int hashCode(){
 		return 1;
 	}
 }
 
 class C{
-	public int hashCode(){
+	@Override
+    public int hashCode(){
 		return 2;
 	}
 
-	public boolean equals(Object obj){
+	@Override
+    public boolean equals(Object obj){
 		return true;
 	}
 }

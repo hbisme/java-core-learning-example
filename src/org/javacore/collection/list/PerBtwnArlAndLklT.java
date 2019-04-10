@@ -40,32 +40,36 @@ public class PerBtwnArlAndLklT{
 		long startTime = System.nanoTime();
 		long endTime;
 		long duration; 
-		for (int i = 0; i < 100000; i++)
-			arrayList.add(i);
+		for (int i = 0; i < 100000; i++) {
+            arrayList.add(i);
+        }
 		endTime = System.nanoTime();
 		duration = endTime - startTime;
 		System.out.println("ArrayList add:  " + duration);
 		 
 		// LinkedList add方法
 		startTime = System.nanoTime();
-		for (int i = 0; i < 100000; i++)
-			linkedList.add(i);
+		for (int i = 0; i < 100000; i++) {
+            linkedList.add(i);
+        }
 		endTime = System.nanoTime();
 		duration = endTime - startTime;
 		System.out.println("LinkedList add: " + duration);
 		 
 		// ArrayList get方法
 		startTime = System.nanoTime();
-		for (int i = 0; i < 10000; i++)
-			arrayList.get(i);
+		for (int i = 0; i < 10000; i++) {
+            arrayList.get(i);
+        }
 		endTime = System.nanoTime();
 		duration = endTime - startTime;
 		System.out.println("ArrayList get:  " + duration);
 		 
 		// LinkedList get方法
 		startTime = System.nanoTime();
-		for (int i = 0; i < 10000; i++)
-			linkedList.get(i);
+		for (int i = 0; i < 10000; i++) {
+            linkedList.get(i);
+        }
 		endTime = System.nanoTime();
 		duration = endTime - startTime;
 		System.out.println("LinkedList get: " + duration);

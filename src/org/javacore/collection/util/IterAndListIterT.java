@@ -5,22 +5,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-/*
- * Copyright [2015] [Jeff Lee]
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *   http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /**
  * @author Jeff Lee
  * @since 2015-6-18 21:36:04
@@ -29,8 +13,9 @@ import java.util.ListIterator;
 public class IterAndListIterT {
 	
 	public static void main(String[] args) {
-		//iterator();
-		listIterator();
+        listIterator();
+
+        iterator();
 	}
 	
 	/**
@@ -49,8 +34,9 @@ public class IterAndListIterT {
 		Iterator i1 = a1.iterator();
 		while (i1.hasNext()){
 			Object obj = i1.next();
-			if (obj.equals("List02"))
-				a1.add("List03");
+			if (obj.equals("List02")) {
+                a1.add("List03");
+            }
 		}
 		
 		System.out.print("集合：\n\t"+a1+"\n");
@@ -70,7 +56,9 @@ public class IterAndListIterT {
 		ListIterator l1 = a1.listIterator();
 		while (l1.hasNext()){
 			Object obj = l1.next();
-			if (obj.equals("List")){
+            System.out.println(obj);
+
+            if (obj.equals("List")){
 				l1.remove();
 				l1.add("List02");
 			}
