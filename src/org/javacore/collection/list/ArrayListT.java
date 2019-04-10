@@ -48,7 +48,8 @@ public class ArrayListT{
 		
 		Iterator i1 = a1.iterator();
 		System.out.println("用迭代器查询全部元素：");
-		while (i1.hasNext())
-			System.out.print(i1.next()+"\t");
+		while (i1.hasNext()) {
+            System.out.print(i1.next() + "\t");
+        }
 	}
 }
