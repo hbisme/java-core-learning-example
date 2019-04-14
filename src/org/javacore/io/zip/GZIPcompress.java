@@ -42,8 +42,9 @@ public class GZIPcompress {
                 new GZIPOutputStream(new FileOutputStream("data.gz")));
         System.out.println("Writing File 压缩");
         int c;
-        while ((c = in.read()) > 0)
+        while ((c = in.read()) > 0) {
             out.write(String.valueOf((char)c).getBytes("UTF-8"));
+        }
         in.close();
         out.close();
 
@@ -53,8 +54,9 @@ public class GZIPcompress {
                 new InputStreamReader(
                         new GZIPInputStream(new FileInputStream("data.gz")),"UTF-8"));// encoding question
         String s;
-        while ((s=in2.readLine()) != null)
+        while ((s=in2.readLine()) != null) {
             System.out.println(s);
+        }
         in2.close();
     }
 }
