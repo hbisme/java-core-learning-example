@@ -22,27 +22,31 @@ public class OSExecuteT {
 			BufferedReader results = new BufferedReader(
 					new InputStreamReader(process.getInputStream()));
 			String s;
-			while ((s = results.readLine()) != null)
-				System.out.println(s);
+			while ((s = results.readLine()) != null) {
+                System.out.println(s);
+            }
 			
 			// 读取进程的错误流
 			BufferedReader errors = new BufferedReader(
 					new InputStreamReader(process.getErrorStream()));
 			while ((s = errors.readLine()) != null) {
 				System.err.println(s);
-				if (!err)
-					err = true;
+				if (!err) {
+                    err = true;
+                }
 			}
 			
 		} catch (Exception e) {
-			if (!command.startsWith("CMD /C"))
-				commond("CMD /C " + command);
-			else 
-				throw new RuntimeException(e);
+			if (!command.startsWith("CMD /C")) {
+                commond("CMD /C " + command);
+            } else {
+                throw new RuntimeException(e);
+            }
 		}
 		
-		if (err)
-			throw new OSExecuteException("Errors Executing " + command);
+		if (err) {
+            throw new OSExecuteException("Errors Executing " + command);
+        }
 	}
 	
 	public static void main(String[] args) {

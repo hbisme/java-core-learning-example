@@ -33,8 +33,7 @@ public class BufferToText {
     private static final int BSIZE = 1024; // 1K 字节
     public static void main(String[] args) throws IOException {
         // 从文件输出流获取FileChannel
-        FileChannel fc =
-                new FileOutputStream("data.txt").getChannel();
+        FileChannel fc = new FileOutputStream("data.txt").getChannel();
         // 将带有字节的缓冲区写入该通道
         fc.write(ByteBuffer.wrap("some data".getBytes()));
         fc.close();

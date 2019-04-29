@@ -17,8 +17,9 @@ public class UsingRandomAccessFile {
 	static void display() throws IOException {
 		// 创建随机访问类，只读模式
 		RandomAccessFile rf = new RandomAccessFile(file, "r");
-		for (int i = 0; i < 7; i++)
-			System.out.println("Value "  + i + ": " + rf.readDouble());// 读取一个Double
+		for (int i = 0; i < 7; i++) {
+            System.out.println("Value "  + i + ": " + rf.readDouble());// 读取一个Double
+        }
 		System.out.println(rf.readUTF());// 读取一个字符串
 		rf.close();
 	}
@@ -26,8 +27,9 @@ public class UsingRandomAccessFile {
 	public static void main(String[] args) throws IOException {
 		// 创建随机访问类，读写模式
 		RandomAccessFile rf = new RandomAccessFile(file, "rw");
-		for (int i = 0; i < 7; i++)
-			rf.writeDouble( i * 1.123);// 写入一个Double
+		for (int i = 0; i < 7; i++) {
+            rf.writeDouble( i * 1.123);// 写入一个Double
+        }
 		rf.writeUTF("文件结束");// 写入一个字符串
 		rf.close();
 		

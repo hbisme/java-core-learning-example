@@ -33,10 +33,12 @@ public abstract class SOutputStream implements Closeable, Flushable {
     }
 
     // 刷新输出流，并强制写出所有缓冲的输出字节
+    @Override
     public void flush() throws IOException {
     }
 
     // 关闭输出流，并释放与该流有关的所有资源
+    @Override
     public void close() throws IOException {
     }
 

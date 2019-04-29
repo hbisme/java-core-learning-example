@@ -20,6 +20,8 @@ public class MemoryInputT {
 				"BufferedInputFileT.java"));
 		int c;
 		while((c = in.read()) != -1)// int形式
-			System.out.println((char)c);// int字节，转char显示
+        {
+            System.out.println((char)c);// int字节，转char显示
+        }
 	}
 }

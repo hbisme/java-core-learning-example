@@ -15,7 +15,7 @@ public class FileT {
 	public static void main(String[] args) {
 		try {
 			// 创建一个目录
-			File dir = new File("E:" + File.separator + "dir");
+			File dir = new File("tmpDir");
 			dir.mkdir();
 			// 创建一个文件
 			File file = new File(dir,"file.txt");

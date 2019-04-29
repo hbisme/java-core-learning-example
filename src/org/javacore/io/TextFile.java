@@ -64,7 +64,9 @@ public class TextFile extends ArrayList<String> {
 	public TextFile(String fileName,String splitter) {
 		super(Arrays.asList(read(fileName).split(splitter)));
 		// 移除一个空格位置
-		if (get(0).equals("")) remove(0);
+		if (get(0).equals("")) {
+            remove(0);
+        }
 	}
 	
 	public TextFile(String fileName) {
@@ -78,8 +80,9 @@ public class TextFile extends ArrayList<String> {
 			PrintWriter out = new PrintWriter(
 					new File(fileName).getAbsolutePath());
 			try {
-				for (String  item : this)
-					out.write(item);
+				for (String  item : this) {
+                    out.write(item);
+                }
 			} finally {
 				out.close();
 			}

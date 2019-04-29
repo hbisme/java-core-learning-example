@@ -25,7 +25,7 @@ public class JavaFileListT {
 	
 	public static void main(String[] args) {
 		// 创建一个目录
-		File file = new File("src\\org\\javacore\\io");// 当前目录
+		File file = new File("src\\org\\javacore\\io");
 		// 获取文件名数组
 		String fileNames[] = file.list(javaFileFilter(".java"));
 		// 打印
